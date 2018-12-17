@@ -1,5 +1,5 @@
 <?php
-Class Config(){
+Class Config{
 
     //informaoes basicas do site
 const SITE_URL = "http://localhost";
@@ -14,6 +14,13 @@ const BD_SENHA = "";
 const BD_BANCO = "lojavariedades";
 
 //informaçoes para php mailler
-const EMAIL_HOST = "smtp.gamil.com"
+const EMAIL_HOST = "smtp.gmail.com";
+const EMAIL_USER = "topamplaopcao@gmail.com";
+const EMAIL_NOME = "Contato Loja";
+const EMAIL_SENHA = "russas123";
+const EMAIL_PORTA = 587;
+const EMAIL_SMTPAUTH = true;
+const EMAIL_SMTPSECURE = "tls";
+const EMAIL_COPIA = "topamplaopcao@gmail.com";                                                                                                                                                                                                                           
 }
 ?>

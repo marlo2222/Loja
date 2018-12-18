@@ -4,8 +4,8 @@ Class Config{
     //informaoes basicas do site
 const SITE_URL = "http://localhost";
 const SITE_PASTA = "Loja";
-const SITE_NOME = "Loja Variada";
-const SITE_EMAIL_ADMIN = "loja_variadades@gmail.com";
+const SITE_NOME = "Top Ampla Opção";
+const SITE_EMAIL_ADMIN = "topamplaopcao@gmail.com";
 
 //informaçoes do banco de dados
 const BD_HOST = "localhost";

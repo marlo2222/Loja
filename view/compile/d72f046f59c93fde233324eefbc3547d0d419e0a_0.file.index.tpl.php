@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-12-17 18:28:36
+/* Smarty version 3.1.33, created on 2018-12-18 00:45:06
   from 'C:\wamp64\www\Loja\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5c17ead443c945_66557437',
+  'unifunc' => 'content_5c1843127433f6_28676879',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd72f046f59c93fde233324eefbc3547d0d419e0a' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja\\view\\index.tpl',
-      1 => 1545071313,
+      1 => 1545093904,
       2 => 'file',
     ),
   ),
@@ -20,20 +20,32 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5c17ead443c945_66557437 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c1843127433f6_28676879 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
 <head>
+    
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="http://localhost/Loja/view/tema/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
+/tema/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
+/tema/contatos/contatos.css">
     <?php echo '<script'; ?>
- type="text/javascript" src="http://localhost/Loja/view/tema/js/jquery.js"><?php echo '</script'; ?>
+ type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
+/tema/js/jquery.js"><?php echo '</script'; ?>
 >
     <?php echo '<script'; ?>
- type="text/javascript" src="http://localhost/Loja/view/tema/js/bootstrap.js"><?php echo '</script'; ?>
+ type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
+/tema/js/bootstrap.js"><?php echo '</script'; ?>
 >
-    <title>Site</title>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['GET_TEMA']->value;?>
+/tema/contatos/contatos.js"><?php echo '</script'; ?>
+>
+    <title><?php echo $_smarty_tpl->tpl_vars['TITULO_SITE']->value;?>
+</title>
+    
 </head>
 
 <body>
@@ -46,13 +58,20 @@ function content_5c17ead443c945_66557437 (Smarty_Internal_Template $_smarty_tpl)
             <div class="collapse navbar-collapse" id="navbarSite">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Inicio</a>
+                        <a class="nav-link " href="<?php echo $_smarty_tpl->tpl_vars['GET_HOME']->value;?>
+"><i class="glyphicon glyphicon-home"></i>Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Minha Conta</a>
+                        <a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['PAG_MINHACONTA']->value;?>
+">Minha Conta</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Carrinho</a>
+                        <a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['PAG_CARRINHO']->value;?>
+">Carrinho</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['PAG_CONTATO']->value;?>
+">Contato</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">Social</a>
@@ -73,16 +92,37 @@ function content_5c17ead443c945_66557437 (Smarty_Internal_Template $_smarty_tpl)
     <div class="container">
         <div class="row">
             <div class="col-lg-3">
-                <h2 class="my-4">Categorias</h2>
+                <h2 class="my-4 mt-lg-5">Categorias</h2>
                 <div class="list-group">
-                  <a href="#" class="list-group-item">Masculino</a>
-                  <a href="#" class="list-group-item">Feminino</a>
-                  <a href="#" class="list-group-item">Infantil</a>
+                    <a href="#" class="list-group-item">Masculino</a>
+                    <a href="#" class="list-group-item">Feminino</a>
+                    <a href="#" class="list-group-item">Infantil</a>
                 </div>
-      
-              </div>
+
+            </div>
+
+            <div class="col-lg-9 mt-lg-5">
+                <ul class="breadcrumb">
+                <li><a href="#"><i class="glyphicon glyphicon-home">HOME</i></a></li>
+                </ul>
+                <div>
+                <?php 
+                Rotas::get_Pagina(); 
+                ?>
+                </div>
+            </div>
         </div>
     </div>
+    </div>
+      <!-- /.rodape -->
+    <footer class="py-2 bg-dark">
+      <div class="container">
+        <p class="m-0 text-left text-white"><?php echo $_smarty_tpl->tpl_vars['TITULO_SITE']->value;?>
+</p>
+        <p class="m-0 text-left text-white">Copyright &copy; marlo2222</p>
+      </div>
+      <!-- /.container -->
+    </footer>
 </body>
 
 </html><?php }

@@ -17,6 +17,12 @@ Class Rotas{
     static function pag_Carrinho(){
         return self::get_SiteHOME() .'/carrinho';
     }
+    static function pag_MinhaConta(){
+        return self::get_SiteHOME() .'/minhaconta';
+    }
+    static function pag_Contato(){
+        return self::get_SiteHOME() .'/contato';
+    }
 
 
     static function get_Pagina(){
@@ -24,9 +30,6 @@ Class Rotas{
 
             $pagina = $_GET['pag'];
             self::$pag = explode('/', $pagina);
-            echo '<pre>';
-            var_dump(self::$pag);
-            echo '<pre>';
             $pagina = 'controller/' .self::$pag[0] . '.php';
             
             if (file_exists($pagina)) {

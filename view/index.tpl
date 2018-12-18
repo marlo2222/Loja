@@ -2,11 +2,15 @@
 <html>
 
 <head>
+    
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="http://localhost/Loja/view/tema/css/bootstrap.css">
-    <script type="text/javascript" src="http://localhost/Loja/view/tema/js/jquery.js"></script>
-    <script type="text/javascript" src="http://localhost/Loja/view/tema/js/bootstrap.js"></script>
-    <title>Site</title>
+    <link rel="stylesheet" type="text/css" href="{$GET_TEMA}/tema/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="{$GET_TEMA}/tema/contatos/contatos.css">
+    <script type="text/javascript" src="{$GET_TEMA}/tema/js/jquery.js"></script>
+    <script type="text/javascript" src="{$GET_TEMA}/tema/js/bootstrap.js"></script>
+    <script type="text/javascript" src="{$GET_TEMA}/tema/contatos/contatos.js"></script>
+    <title>{$TITULO_SITE}</title>
+    
 </head>
 
 <body>
@@ -19,13 +23,16 @@
             <div class="collapse navbar-collapse" id="navbarSite">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Inicio</a>
+                        <a class="nav-link " href="{$GET_HOME}"><i class="glyphicon glyphicon-home"></i>Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Minha Conta</a>
+                        <a class="nav-link" href="{$PAG_MINHACONTA}">Minha Conta</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Carrinho</a>
+                        <a class="nav-link" href="{$PAG_CARRINHO}">Carrinho</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{$PAG_CONTATO}">Contato</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="navDrop">Social</a>
@@ -46,16 +53,36 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3">
-                <h2 class="my-4">Categorias</h2>
+                <h2 class="my-4 mt-lg-5">Categorias</h2>
                 <div class="list-group">
-                  <a href="#" class="list-group-item">Masculino</a>
-                  <a href="#" class="list-group-item">Feminino</a>
-                  <a href="#" class="list-group-item">Infantil</a>
+                    <a href="#" class="list-group-item">Masculino</a>
+                    <a href="#" class="list-group-item">Feminino</a>
+                    <a href="#" class="list-group-item">Infantil</a>
                 </div>
-      
-              </div>
+
+            </div>
+
+            <div class="col-lg-9 mt-lg-5">
+                <ul class="breadcrumb">
+                <li><a href="#"><i class="glyphicon glyphicon-home">HOME</i></a></li>
+                </ul>
+                <div>
+                {php}
+                Rotas::get_Pagina(); 
+                {/php}
+                </div>
+            </div>
         </div>
     </div>
+    </div>
+      <!-- /.rodape -->
+    <footer class="py-2 bg-dark">
+      <div class="container">
+        <p class="m-0 text-left text-white">{$TITULO_SITE}</p>
+        <p class="m-0 text-left text-white">Copyright &copy; marlo2222</p>
+      </div>
+      <!-- /.container -->
+    </footer>
 </body>
 
 </html>

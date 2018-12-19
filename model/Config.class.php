@@ -12,6 +12,7 @@ const BD_HOST = "localhost";
 const BD_USER = "root";
 const BD_SENHA = "";
 const BD_BANCO = "lojavariedades";
+const BD_PREFIX = "";
 
 //informaçoes para php mailler
 const EMAIL_HOST = "smtp.gmail.com";

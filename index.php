@@ -15,7 +15,11 @@ $smarty->assign('PAG_MINHACONTA', Rotas::pag_MinhaConta());
 $smarty->assign('TITULO_SITE', Config::SITE_NOME);
 //echo Rotas::get_SiteTEMA();
 // echo Rotas::pag_Carrinho() . '<br>';
-//$smarty-> assing('GET_TEMA', Rotas::get_SiteTEMA());
+//$smarty-> assing('GET_TEMA', Rotas::get_SiteTEMA());xao
+$dados = new Conexao();
+$slq = "SELECT * FROM categorias";
+$dados->ExecuteSQL($slq);
+echo $dados->TotalDados();
 
 $smarty->display('index.tpl');
 ?>

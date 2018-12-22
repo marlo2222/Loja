@@ -1,6 +1,7 @@
 <?php
     Class Conexao extends Config{
         private $host, $user, $senha, $banco, $prefix; 
+        protected $obj, $itens = array();
 
         function __construct(){
             $this->host = self::BD_HOST;
@@ -38,7 +39,7 @@
             return $this->obj->rowCount();
         }
         function GetItens(){
-            //return $this->obj->itens;
+            return $this->itens;
         }
     }
 ?>

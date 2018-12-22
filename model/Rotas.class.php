@@ -23,6 +23,23 @@ Class Rotas{
     static function pag_Contato(){
         return self::get_SiteHOME() .'/contato';
     }
+    static function pag_Produtos(){
+        return self::get_SiteHOME() .'/produtos';
+    }
+    static function pag_ProdutosInfo(){
+        return self::get_SiteHOME() .'/produtos_info';
+    }
+    static function get_ImagePasta(){
+        return 'media/img/';
+    }
+    static function get_ImageURL(){
+        return self::get_SiteHOME(). '/' .self::get_ImagePasta();
+    }
+    /*static function ImageLink($img, $largura, $altura){
+        $image = self::get_ImageURL()."thumb.php?src={$img}&W={$largura}&H={$altura}&Zc=1";
+        
+        return $image;
+    }*/
 
 
     static function get_Pagina(){

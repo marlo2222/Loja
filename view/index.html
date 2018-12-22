@@ -57,7 +57,7 @@
 
             <div class="col-lg-9">
                 <ul class="breadcrumb">
-                <li><a href="#"><i class="glyphicon glyphicon-home">HOME</i></a></li>
+                    <li><a href="#"><i class="glyphicon glyphicon-home">HOME</i></a></li>
                 </ul>
             </div>
 
@@ -67,6 +67,17 @@
     </div>
 
     </div>
+
+    {foreach from=$PRO item=P}
+    <h3 class="text-center">{$P.prod_nome} - Ref: {$P.prod_ref}</h3>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <img class="thumbnail" src="{$p.prod_img}" alt="">
+        </div>
+
+    </div>
+
 </body>
 
 </html>

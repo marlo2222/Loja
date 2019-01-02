@@ -26,6 +26,9 @@
                         <a class="nav-link " href="{$GET_HOME}"><i class="glyphicon glyphicon-home"></i>Inicio</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="{$PAG_PRODUTO}">Produtos</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="{$PAG_MINHACONTA}">Minha Conta</a>
                     </li>
                     <li class="nav-item">
@@ -55,9 +58,10 @@
             <div class="col-lg-3">
                 <h2 class="my-4 mt-lg-5">Categorias</h2>
                 <div class="list-group">
-                    <a href="#" class="list-group-item">Masculino</a>
-                    <a href="#" class="list-group-item">Feminino</a>
-                    <a href="#" class="list-group-item">Infantil</a>
+                {foreach from=$CATEGORIAS item=c}
+                    <a href="#" class="list-group-item">{$c.cat_nome}</a>
+                    
+                {/foreach}
                 </div>
 
             </div>

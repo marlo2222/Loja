@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2018-12-18 00:45:06
+/* Smarty version 3.1.33, created on 2018-12-27 21:03:11
   from 'C:\wamp64\www\Loja\view\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5c1843127433f6_28676879',
+  'unifunc' => 'content_5c253e0f0ac536_24929314',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd72f046f59c93fde233324eefbc3547d0d419e0a' => 
     array (
       0 => 'C:\\wamp64\\www\\Loja\\view\\index.tpl',
-      1 => 1545093904,
+      1 => 1545944526,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5c1843127433f6_28676879 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5c253e0f0ac536_24929314 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 
@@ -62,6 +62,10 @@ function content_5c1843127433f6_28676879 (Smarty_Internal_Template $_smarty_tpl)
 "><i class="glyphicon glyphicon-home"></i>Inicio</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['PAG_PRODUTO']->value;?>
+">Produtos</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="<?php echo $_smarty_tpl->tpl_vars['PAG_MINHACONTA']->value;?>
 ">Minha Conta</a>
                     </li>
@@ -94,9 +98,18 @@ function content_5c1843127433f6_28676879 (Smarty_Internal_Template $_smarty_tpl)
             <div class="col-lg-3">
                 <h2 class="my-4 mt-lg-5">Categorias</h2>
                 <div class="list-group">
-                    <a href="#" class="list-group-item">Masculino</a>
-                    <a href="#" class="list-group-item">Feminino</a>
-                    <a href="#" class="list-group-item">Infantil</a>
+                <?php
+$_from = $_smarty_tpl->smarty->ext->_foreach->init($_smarty_tpl, $_smarty_tpl->tpl_vars['CATEGORIAS']->value, 'c');
+if ($_from !== null) {
+foreach ($_from as $_smarty_tpl->tpl_vars['c']->value) {
+?>
+                    <a href="#" class="list-group-item"><?php echo $_smarty_tpl->tpl_vars['c']->value['cat_nome'];?>
+</a>
+                    
+                <?php
+}
+}
+$_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
                 </div>
 
             </div>
